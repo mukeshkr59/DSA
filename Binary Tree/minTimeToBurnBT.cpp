@@ -51,3 +51,22 @@ int minTimeToBurn(TreeNode *root, int target)
     return time;                       // Return the total time taken to burn the tree from the target node
 }
        
+
+int main()
+{
+    // Example usage:
+    TreeNode *root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+    root->right->right = new TreeNode(6);
+
+    int target = 5;
+    int result = minTimeToBurn(root, target);
+    cout << "Minimum time to burn the binary tree from node " << target << " is: " << result << endl;
+
+    // Clean up memory (not shown here for brevity)
+
+    return 0;
+}
